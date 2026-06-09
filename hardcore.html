@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardcore LOX - Lyll0x</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<a class="btn home-btn" href="index.html">
+    ⬅️ Accueil
+</a>
+    <h1>HARDCORE LOX</h1>
+    <p>Hardcore Minecraft • Une seule vie • Chaque jour compte</p>
+</header>
+
+<section class="hero">
+    <h2>Ma Survie Minecraft Hardcore</h2>
+
+    <div class="hero-text">
+        <p>Bienvenue dans mon aventure Minecraft Hardcore.</p>
+
+        <p>Dans ce monde, une seule mort signifie la fin de l'aventure.</p>
+
+        <p>Mon objectif est simple : survivre le plus longtemps possible, construire, explorer et relever tous les défis du jeu.</p>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Informations du serveur</h2>
+    <ul>
+        <li><strong>Mode :</strong> Hardcore</li>
+        <li><strong>Hébergement :</strong> Aternos</li>
+        <li><strong>Version :</strong> Minecraft Java 1.20.1</li>
+        <li>
+    <strong>IP serveur :</strong>
+    <span id="server-ip" class="copy-ip">
+        AventureHardcore.aternos.me:14338
+    </span>
+</li>
+        <li><strong>Objectif :</strong> Survivre sans mourir</li>
+        <li><strong>Créateur :</strong> Lyll0x</li>
+    </ul>
+</section>
+
+<section class="card">
+    <h2>Mods utilisés</h2>
+
+    <h3>🎤 Simple Voice Chat</h3>
+    <p>Chat vocal de proximité pour parler en jeu.</p>
+    <a class="btn" href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank">
+        Télécharger le mod
+    </a>
+
+    <h3>💡 Dynamic Lights</h3>
+    <p>Les objets lumineux éclairent quand tu les tiens.</p>
+    <a class="btn" href="https://www.curseforge.com/minecraft/mc-mods/dynamic-lights" target="_blank">
+        Télécharger le mod
+    </a>
+
+    <h3>📅 Day Counter</h3>
+    <p>Compte les jours dans ton monde Hardcore.</p>
+    <a class="btn" href="https://modrinth.com/datapack/daycounter" target="_blank">
+        Télécharger le mod
+    </a>
+</section>
+
+<section class="card">
+    <h2>À propos de cette aventure</h2>
+    <p>
+        Chaque jour est un défi. Explorer, construire, survivre sans jamais mourir.
+    </p>
+</section>
+
+<section class="card">
+    <h2>Mes objectifs</h2>
+    <ul>
+		<li>Full diamand</li>
+        <li>Construire une base</li>
+        <li>Explorer le Nether</li>
+        <li>Full netherite</li>
+        <li>Vaincre le Dragon de l'End</li>
+        <li>Survivre le plus longtemps possible</li>
+    </ul>
+</section>
+
+
+<footer>
+    <p>© 2026 Hardcore LOX - Créé par Lyll0x</p>
+</footer>
+
+<div id="copy-message">✅ Texte copié !</div>
+
+<script>
+const ip = document.getElementById("server-ip");
+const message = document.getElementById("copy-message");
+
+ip.addEventListener("click", async () => {
+
+    try {
+        await navigator.clipboard.writeText(ip.textContent.trim());
+
+        message.classList.add("show");
+
+        setTimeout(() => {
+            message.classList.remove("show");
+        }, 2000);
+
+    } catch (err) {
+        alert("Impossible de copier l'adresse.");
+    }
+
+});
+</script>
+
+</body>
+</html>
